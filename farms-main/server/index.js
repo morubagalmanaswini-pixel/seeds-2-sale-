@@ -210,8 +210,10 @@ app.use('/api/orders', async (request, response, next) => {
 });
 
 app.post('/api/demand-radar', async (request, response) => {
-  const identity = await requireProfile(request, ['admin', 'farmer', 'customer_care']);
-  if (identity.error) return response.status(identity.status).json({ error: identity.error });
+  if (authConfigured() || process.env.NODE_ENV === 'production') {
+    const identity = await requireProfile(request, ['admin', 'farmer', 'customer_care']);
+    if (identity.error) return response.status(identity.status).json({ error: identity.error });
+  }
   const result = analyzeDemand({ query: request.body.query, produce: request.body.produce, orders: request.body.orders });
   response.json(result);
 });
