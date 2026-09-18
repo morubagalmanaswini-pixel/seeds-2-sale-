@@ -1,0 +1,29 @@
+{
+  "name": "farmdirect-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "npm run build && node server/index.js",
+    "preview": "vite preview",
+    "delivery": "node server/index.js",
+    "test:delivery": "node --test server/assignment.test.js"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.116.0",
+    "@vitejs/plugin-react": "latest",
+    "dotenv": "^16.4.7",
+    "express": "latest",
+    "firebase-admin": "latest",
+    "lucide-react": "latest",
+    "mongodb": "latest",
+    "qrcode": "^1.5.4",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "ws": "latest"
+  }
+}

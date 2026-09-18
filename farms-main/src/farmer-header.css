@@ -1,0 +1,30 @@
+.farmer-header {
+  position: relative;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, #f7f8ed, #ffffff);
+}
+
+.farmer-header::after {
+  content: 'FARMER DASHBOARD';
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  padding: 7px 9px;
+  color: var(--forest);
+  background: #e6efd7;
+  font: 700 9px 'DM Mono', monospace;
+  letter-spacing: .8px;
+}
+
+@media (max-width: 600px) {
+  .farmer-header {
+    padding: 20px;
+  }
+
+  .farmer-header::after {
+    position: static;
+    display: inline-block;
+    margin-top: 16px;
+  }
+}

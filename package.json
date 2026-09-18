@@ -1,0 +1,11 @@
+{
+  "name": "farmdirect-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix farms-main run dev",
+    "build": "npm --prefix farms-main run build",
+    "preview": "npm --prefix farms-main run preview",
+    "delivery": "npm --prefix farms-main run delivery",
+    "test:delivery": "npm --prefix farms-main run test:delivery"
+  }
+}

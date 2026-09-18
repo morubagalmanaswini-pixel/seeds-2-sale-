@@ -1,0 +1,6 @@
+{
+  "name": "FarmDirect",
+  "description": "Direct farm-to-consumer marketplace removing middlemen with fair farm-gate pricing, verified produce listings, and transparent price comparisons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
