@@ -46,6 +46,115 @@ body{background:radial-gradient(circle at 12% 8%,#ffffffb8 0 12%,transparent 32%
 @media(max-width:600px){.topbar{height:68px;padding:0 16px}.brand{gap:8px;font-size:17px}.brand-mark.farmer-logo{width:43px;height:43px}.brand-mark.farmer-logo span{font-size:26px}.top-actions{margin-left:auto}.language-switcher span,.role-switch{font-size:0}.language-switcher{padding:8px}.language-switcher select{font-size:10px}.account-button{padding:9px}.hero-band{padding:50px 22px 28px;border-radius:0}.hero-copy h1{font-size:49px}.hero-art{border-radius:20px}.listing-section,.content-page,.tool-page,.radar-page,.connect-page{padding:54px 20px 108px}.produce-grid{gap:14px}.produce-card{border-radius:15px}.produce-image{height:135px}.produce-body{padding:13px}.produce-title h3{font-size:12px}.radar-search{border-radius:15px}.modal{border-radius:20px}}
 .field{position:static;width:auto;height:auto;left:auto;transform:none}.camera-input{flex-wrap:wrap}.camera-input svg{flex:none}.camera-input small{display:block;margin:0;color:var(--muted);font-size:10px}
 
+/* Seeds 2 Sale design system: presentation-only overrides. */
+:root{
+	--forest:#174B35;
+	--deep:#103C2B;
+	--leaf:#238653;
+	--sage:#DCE8D3;
+	--mint:#EDF4E9;
+	--cream:#FAF8F1;
+	--white:#FFFFFF;
+	--gold:#F4B942;
+	--ink:#1D3027;
+	--muted:#69766D;
+	--line:#E6EAE1;
+	--red:#C45445;
+	--shadow:0 18px 45px #103C2B14;
+}
+
+html{scroll-behavior:smooth}
+body{
+	background:linear-gradient(135deg,#FAF8F1 0%,#F7FAF4 52%,#EDF4E9 100%);
+	color:var(--ink);
+	font-family:'DM Sans',sans-serif;
+}
+button,input,select,textarea{font-family:'DM Sans',sans-serif}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #F4B942;outline-offset:3px}
+
+.topbar{
+	height:80px;
+	padding:0 clamp(20px,5vw,72px);
+	background:#FAF8F1F2;
+	border-bottom:1px solid var(--line);
+	box-shadow:0 8px 24px #103C2B0D;
+	backdrop-filter:blur(16px);
+}
+.brand{gap:12px;color:var(--deep);font-size:21px;font-weight:800;letter-spacing:0}
+.brand-mark.farmer-logo{border-color:var(--deep);box-shadow:0 4px 0 #103C2B1A}
+.brand>span>span{color:var(--leaf)}
+.desktop-nav{gap:5px}
+.desktop-nav button{height:42px;padding:0 13px;border-radius:999px;color:var(--muted);transition:background .2s,color .2s,transform .2s}
+.desktop-nav button:hover{background:var(--mint);color:var(--forest);transform:translateY(-1px)}
+.desktop-nav button.active{background:var(--forest);color:var(--white);box-shadow:0 6px 15px #174B3530}
+.desktop-nav button.active:after{display:none}
+.role-switch,.language-switcher,.cart-button,.account-button{border-color:var(--line);border-radius:999px;background:var(--white);color:var(--forest)}
+.account-button{background:var(--deep);color:var(--white);box-shadow:0 6px 15px #103C2B22}
+
+.market-page .hero-band{
+	background-image:url('/assets/farm-market-hero.jpg');
+	background-color:var(--sage);
+	color:var(--deep);
+	box-shadow:0 14px 35px #103C2B12;
+}
+.market-page .hero-copy{max-width:560px}
+.market-page .hero-copy h1{color:var(--deep);text-shadow:0 1px 0 #FFFFFF80}
+.market-page .hero-copy h1 em{color:var(--leaf)}
+.market-page .hero-copy p{color:var(--ink);max-width:470px}
+.market-page .hero-copy .primary-button{background:var(--forest);color:var(--white);border-radius:999px;box-shadow:0 8px 18px #103C2B2B}
+.trust-row{background:var(--white);border-color:var(--line);color:var(--forest)}
+
+.listing-section,.content-page,.tool-page,.radar-page,.connect-page,.nearby-markets-page{max-width:1240px}
+.section-heading h2,.panel-heading h2,.flow-panel h2,.empty-orders h2,.modal h2,.page-header h1,.tool-intro h1{color:var(--deep)}
+.eyebrow,.panel-kicker{color:var(--leaf)}
+.primary-button{background:var(--gold);color:var(--deep);border-radius:8px;box-shadow:0 8px 18px #F4B9422B;transition:transform .2s,box-shadow .2s}
+.primary-button:hover{box-shadow:0 10px 22px #F4B9423D}
+.search-box,.radar-search,.field input,.field select,.field textarea{border-color:var(--line);border-radius:10px;background:var(--white)}
+.search-box:focus-within{border-color:var(--leaf);box-shadow:0 0 0 4px #23865318}
+.category-row button{border:1px solid var(--line);border-radius:999px;background:var(--white)}
+.category-row button.selected{background:var(--forest);color:var(--white);border-color:var(--forest)}
+.produce-grid{gap:20px}
+.produce-card,.hub-panel,.farmer-directory,.compose-panel,.review-card,.help-panel,.help-sidebar-card{border:1px solid var(--line);border-radius:14px;background:var(--white);box-shadow:var(--shadow)}
+.produce-card:hover{box-shadow:0 18px 36px #103C2B20}
+.produce-image{height:190px}
+.produce-body{padding:18px}
+.category-label{border-radius:999px;background:#FFFFFFE6;color:var(--forest)}
+.organic-label{border-radius:999px;background:var(--forest);color:var(--gold)}
+.price-line strong,.stat-cluster strong,.dashboard-stats strong,.order-amount strong,.incoming-row b{color:var(--forest)}
+.buy-button{border-radius:8px;background:var(--forest);color:var(--white);transition:background .2s,transform .2s}
+.buy-button:hover{background:var(--deep);transform:translateY(-1px)}
+
+.calculator-panel,.radar-map-panel,.auth-panel,.mobile-nav{background:var(--deep)}
+.calculator-panel{border-radius:14px;box-shadow:var(--shadow)}
+.flow-node,.dashboard-stats,.order-row,.orders-list{border-color:var(--line)}
+.flow-node,.dashboard-stats>div,.order-row{background:var(--white)}
+.modal-backdrop{background:#103C2B99}
+.modal,.add-modal{border-radius:16px;background:var(--cream);box-shadow:0 24px 70px #103C2B40}
+.close-button{border:1px solid var(--line);background:var(--white)}
+.quantity-control button{background:var(--mint)}
+.status{background:var(--mint);color:var(--leaf)}
+.order-icon,.flow-node div{background:var(--mint);color:var(--forest)}
+.mobile-nav{border-radius:16px;padding:9px 4px;box-shadow:0 10px 30px #103C2B40}
+.mobile-nav button.active{color:var(--gold)}
+
+@media(max-width:950px){
+	.topbar{height:74px}
+	.produce-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+	.topbar{height:66px;padding:0 16px}
+	.brand{font-size:17px}
+	.top-actions{min-width:0;flex:1;overflow:hidden;justify-content:flex-end}
+	.top-actions>*{flex:0 0 auto}
+	.market-page .hero-band{background-position:65% center}
+	.listing-section,.content-page,.tool-page,.radar-page,.connect-page,.nearby-markets-page{padding-left:20px;padding-right:20px}
+	.produce-grid{gap:14px}
+	.produce-image{height:140px}
+	.produce-body{padding:13px}
+	.produce-card{border-radius:12px}
+	.buy-button{min-height:40px}
+}
+
 .radar-tools{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:22px}.rain-predictor,.support-panel{padding:27px;background:var(--cream);border:1px solid var(--line);box-shadow:var(--shadow)}.tool-card-heading{display:flex;justify-content:space-between;align-items:start;gap:15px}.tool-card-heading h2{margin:8px 0 0;color:var(--forest);font:600 27px 'Fraunces',serif}.tool-card-heading>svg{color:var(--leaf)}.rain-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.rain-controls label,.support-topic{display:block}.rain-controls label span,.support-topic span{display:block;margin-bottom:6px;color:var(--muted);font:10px 'DM Mono',monospace;text-transform:uppercase}.rain-controls select,.support-topic select{width:100%;padding:10px;border:1px solid var(--line);background:white;color:var(--ink);font-size:11px;outline:none}.rain-score{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:16px;padding:17px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.rain-score small{display:block;color:var(--muted);font:9px 'DM Mono',monospace}.rain-score strong{display:block;margin-top:4px;color:var(--forest);font:600 31px 'Fraunces',serif}.rain-meter{height:8px;margin-bottom:7px;background:#e1eadf;border-radius:8px;overflow:hidden}.rain-meter span{display:block;height:100%;background:linear-gradient(90deg,var(--leaf),#e5a94f);border-radius:inherit;transition:width .3s ease}.rain-score>b{color:var(--red);font-size:10px}.rain-details{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:17px 0 0}.rain-details span{color:var(--muted);font-size:10px;line-height:1.4}.rain-details b{display:block;margin-bottom:3px;color:var(--forest);font:9px 'DM Mono',monospace;text-transform:uppercase}.tool-advice{margin:18px 0 0;color:var(--muted);font-size:11px;line-height:1.6}.tool-advice strong{color:var(--forest)}.support-panel{background:var(--forest);color:white}.support-panel .tool-card-heading h2{color:white}.support-panel .tool-card-heading>svg{color:var(--lime)}.support-panel p{margin:20px 0;color:#c8d5c8;font-size:11px;line-height:1.6}.support-topic select{border:0}.support-actions{display:flex;align-items:center;gap:8px;margin-top:16px}.support-actions .whatsapp-cta{flex:1;padding:11px 12px}.support-icon-link{display:grid;place-items:center;width:36px;height:36px;border:1px solid #a5baa866;color:var(--lime);text-decoration:none}.support-icon-link:hover{background:#ffffff16}.support-confirm{width:100%;margin-top:12px;padding:10px;background:transparent;border:1px solid #a5baa866;color:#e3ecdf;font-size:10px;font-weight:700}.support-confirm:hover{border-color:var(--lime);color:var(--lime)}
 @media(max-width:950px){.radar-tools{grid-template-columns:1fr}}
 @media(max-width:600px){.radar-tools{gap:15px}.rain-predictor,.support-panel{padding:20px}.rain-controls{grid-template-columns:1fr}.rain-score{grid-template-columns:1fr auto}.rain-meter{grid-column:1/-1;grid-row:2;margin:0}.rain-details{grid-template-columns:1fr}.tool-card-heading h2{font-size:24px}}
@@ -131,3 +240,165 @@ body{background:radial-gradient(circle at 14% 7%,#FFFDF7B8 0 13%,transparent 34%
 .help-sidebar-card{padding:22px 20px}.help-sidebar-card.warning{background:linear-gradient(135deg,#fffaf3,#fff1e5);border-color:#c4544566}.help-sidebar-card h2{margin:8px 0 0;color:var(--forest);font:600 24px 'Fraunces',serif}.help-sidebar-card ul{margin:15px 0 0;padding-left:18px;color:var(--muted);font-size:12px;line-height:1.9}.help-sidebar-card p{margin:14px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
 @media(max-width:950px){.help-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.farmer-help-page{padding:50px 20px 94px}.help-panel,.help-sidebar-card{padding:18px}.help-need-list,.help-categories{gap:8px}.help-need-list button,.help-categories button{padding:8px 10px}.service-card h3{font-size:18px}.service-meta{flex-direction:column;align-items:flex-start}.service-actions .primary-button{width:100%}}
+
+/* Layout authority: structural redesign for the existing component system. */
+:root{
+	--forest:#174B35;--deep:#103C2B;--leaf:#238653;--leaf-soft:#6D9E56;
+	--sage:#DCE8D3;--mint:#EDF4E9;--cream:#FAF8F1;--white:#FFFFFF;
+	--gold:#F4B942;--ink:#1D3027;--muted:#69766D;--line:#E6EAE1;
+	--surface-shadow:0 20px 55px #103C2B12;
+}
+
+body{background:linear-gradient(120deg,#FAF8F1 0%,#F6FAF4 52%,#EDF4E9 100%);color:var(--ink)}
+.app-shell main{width:100%;overflow:hidden}
+.topbar{height:88px;padding:0 clamp(24px,6vw,96px);border-bottom:1px solid var(--line);box-shadow:0 10px 30px #103C2B0D}
+.brand{font-size:22px}
+.desktop-nav{margin-left:auto;margin-right:18px;gap:6px}
+.desktop-nav button{height:46px;padding:0 14px;border-radius:14px;font-size:11px}
+.desktop-nav button.active{box-shadow:none}
+.top-actions{gap:8px}
+
+/* Marketplace: give the landing screen a deliberate editorial composition. */
+.market-page .hero-band{
+	min-height:590px;padding:152px clamp(28px,8vw,128px) 116px;
+	display:flex;align-items:center;background-position:center;background-size:cover;
+	border-radius:0 0 72px 0;box-shadow:none;
+}
+.market-page .hero-copy{width:min(560px,58%);padding:38px 42px;border-left:5px solid var(--gold);background:#FAF8F1E8;box-shadow:0 24px 60px #103C2B20;backdrop-filter:blur(8px)}
+.market-page .hero-copy h1{margin:16px 0 20px;font-size:clamp(52px,6vw,86px);line-height:.9}
+.market-page .hero-copy p{margin-bottom:30px;font-size:15px;line-height:1.75}
+.market-page .hero-copy .primary-button{min-height:50px;padding:0 22px}
+.market-page .trust-row{max-width:1080px;margin:-42px auto 0;padding:23px 30px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;border-radius:24px;box-shadow:0 18px 40px #103C2B14}
+.market-page .listing-section{max-width:1240px;padding:94px clamp(24px,5vw,72px) 120px}
+.market-page .section-heading{align-items:end;padding-bottom:25px;border-bottom:1px solid var(--line)}
+.market-page .section-heading h2{font-size:42px;line-height:1}
+.market-page .toolbar{display:grid;grid-template-columns:minmax(260px,.8fr) 1.2fr;align-items:center;gap:30px;margin:34px 0 32px}
+.market-page .category-row{justify-content:end;gap:8px}
+.market-page .category-row button{padding:11px 16px}
+.market-page .produce-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.market-page .produce-card{display:flex;flex-direction:column;min-height:480px;border-radius:24px;overflow:hidden;border-color:var(--line);box-shadow:0 10px 24px #103C2B0A;transition:transform .25s,box-shadow .25s}
+.market-page .produce-card:hover{transform:translateY(-7px);box-shadow:0 24px 48px #103C2B1C}
+.market-page .produce-image{height:245px;flex:none;background:var(--sage)}
+.market-page .produce-photo{transition:transform .45s ease}
+.market-page .produce-card:hover .produce-photo{transform:scale(1.045)}
+.market-page .produce-body{display:flex;flex:1;flex-direction:column;padding:24px}
+.market-page .produce-title{min-height:54px}
+.market-page .produce-title h3{font-size:16px;line-height:1.25}
+.market-page .produce-title p{font-size:11px;line-height:1.4}
+.market-page .location{margin-top:16px;font-size:11px}
+.market-page .price-line{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.market-page .price-line strong{font-size:21px}
+.market-page .buy-button{min-height:42px;padding:0 14px;border-radius:11px}
+
+/* Shared pages: shift from loose stacks to framed editorial sections. */
+.content-page,.tool-page,.radar-page,.connect-page,.nearby-markets-page,.farmer-help-page{max-width:1280px;padding:88px clamp(24px,6vw,88px) 124px}
+.page-header,.tool-intro,.radar-heading,.connect-heading,.nearby-markets-hero{max-width:980px;margin-bottom:54px}
+.page-header h1,.tool-intro h1,.radar-heading h1,.connect-heading h1,.nearby-markets-hero h1{font-size:clamp(48px,6vw,78px);line-height:.92}
+.page-header p,.tool-intro p,.radar-heading p,.connect-heading p,.nearby-markets-hero p{font-size:15px;line-height:1.8}
+.calculator-layout,.hub-grid,.radar-layout,.connect-grid,.help-grid{gap:28px}
+.calculator-panel,.radar-map-panel,.auth-panel{border-radius:28px;padding:36px;box-shadow:var(--surface-shadow)}
+.flow-panel{padding:36px 20px}
+.flow-node{width:230px;padding:16px;border-radius:16px;box-shadow:0 8px 20px #103C2B0A}
+.dashboard-stats{gap:0;margin-bottom:48px;border:0;background:transparent;box-shadow:none}
+.dashboard-stats>div{min-height:120px;padding:24px;border:1px solid var(--line);border-right:0}
+.dashboard-stats>div:first-child{border-radius:20px 0 0 20px}.dashboard-stats>div:last-child{border-right:1px solid var(--line);border-radius:0 20px 20px 0}
+.hub-panel,.farmer-directory,.compose-panel,.radar-insights,.review-card,.help-panel,.help-sidebar-card{padding:30px;border-radius:24px;box-shadow:var(--surface-shadow)}
+.hub-grid{align-items:start}
+.panel-heading{padding-bottom:22px}
+.orders-list{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--white)}
+.order-row{padding:22px 24px;border-bottom:1px solid var(--line)}
+.order-row:last-child{border-bottom:0}
+.orders-list+.empty-orders{border-radius:22px}
+
+/* Forms: wider field rhythm, stronger grouping, and aligned actions. */
+.market-search-form,.rescue-tool,.sell-simulator,.farm-conditions,.route-board,.input-shop,.ops-panel,.partner-panel,.cart-list,.radar-analytics{padding:34px;border-radius:26px;box-shadow:var(--surface-shadow)}
+.market-form-grid,.rescue-form,.simulator-controls,.conditions-fields,.delivery-fields{gap:18px 20px}
+.field{margin-top:18px}
+.field>span{margin-bottom:8px;color:var(--forest);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.field input,.field select,.field textarea,.rain-controls select,.support-topic select,.conditions-fields select,.delivery-order select{min-height:48px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--white);color:var(--ink);box-shadow:inset 0 1px 1px #103C2B08}
+.field textarea{padding:13px 14px}
+.field small,.location-field small{display:block;margin-top:7px;color:var(--muted);font-size:10px;line-height:1.45}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 4px #23865318}
+.checkbox-field{align-items:flex-start;padding-top:30px}
+.checkbox-field input{margin-top:2px}
+.market-form-heading,.form-section-title{margin-bottom:20px}
+.market-submit{min-height:48px;margin-top:24px;padding:0 20px;border-radius:12px}
+.form-grid{gap:0 24px}
+.add-modal{width:min(720px,100%);padding:42px;border-radius:28px}
+.auth-modal{border-radius:28px;overflow:hidden}
+.auth-form{padding:44px}
+
+/* Product detail, checkout, support and data panels. */
+.modal{width:min(980px,100%);grid-template-columns:.9fr 1.1fr;border-radius:28px;overflow:hidden}
+.modal-image{min-height:530px}
+.modal-content{padding:48px}
+.modal h2{font-size:40px;line-height:1}
+.cart-list{max-width:900px}
+.cart-row{padding:22px 8px}
+.cart-item-image{width:76px;height:76px;border-radius:16px}
+.cart-total{padding-top:10px;font-size:14px}.cart-total strong{font-size:30px}
+.market-results-layout{gap:28px}.market-list,.comparison-panel,.network-panel{padding:26px;border-radius:24px;background:var(--white);border:1px solid var(--line);box-shadow:var(--surface-shadow)}
+.market-card{padding:20px 0;border-bottom:1px solid var(--line)}
+.market-card:last-child{border-bottom:0}
+.service-list{gap:20px}.service-card{padding:24px;border-radius:20px;background:var(--white);box-shadow:0 8px 20px #103C2B0A}
+.input-grid{gap:20px}.input-card{border-radius:20px;background:var(--white);box-shadow:0 10px 26px #103C2B0D}.input-photo{height:180px}.input-card-content{min-height:210px;padding:22px}
+.review-grid{gap:22px}.review-form{gap:18px;padding:26px;border-radius:22px;background:var(--white);border:1px solid var(--line)}
+.customer-care-chat-panel,.payment-scanner,.upi-modal{border-radius:26px}
+
+@media(max-width:1100px){
+	.market-page .produce-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+	.market-page .toolbar{grid-template-columns:1fr}.market-page .category-row{justify-content:start}
+	.desktop-nav{margin-right:4px}.desktop-nav button{padding:0 10px}
+}
+@media(max-width:950px){
+	.market-page .hero-copy{width:min(680px,100%)}
+	.market-page .trust-row{grid-template-columns:1fr;gap:13px}
+	.dashboard-stats{grid-template-columns:repeat(2,1fr);gap:12px}
+	.dashboard-stats>div,.dashboard-stats>div:first-child,.dashboard-stats>div:last-child{border:1px solid var(--line);border-radius:18px}
+	.market-search-form,.rescue-tool,.sell-simulator,.farm-conditions,.route-board,.input-shop,.ops-panel,.partner-panel,.cart-list,.radar-analytics{padding:26px}
+}
+@media(max-width:600px){
+	.topbar{height:70px;padding:0 16px}
+	.market-page .hero-band{min-height:640px;padding:132px 20px 82px;border-radius:0 0 34px 0}
+	.market-page .hero-copy{padding:28px 22px;border-left-width:4px}
+	.market-page .hero-copy h1{font-size:48px}
+	.market-page .trust-row{margin:-26px 16px 0;padding:20px;border-radius:20px}
+	.market-page .listing-section{padding:70px 20px 110px}
+	.market-page .section-heading h2{font-size:34px}
+	.market-page .produce-grid{grid-template-columns:1fr;gap:18px}
+	.market-page .produce-card{min-height:0}
+	.market-page .produce-image{height:220px}
+	.content-page,.tool-page,.radar-page,.connect-page,.nearby-markets-page,.farmer-help-page{padding:60px 20px 108px}
+	.page-header,.tool-intro,.radar-heading,.connect-heading,.nearby-markets-hero{margin-bottom:36px}
+	.page-header h1,.tool-intro h1,.radar-heading h1,.connect-heading h1,.nearby-markets-hero h1{font-size:46px}
+	.calculator-panel,.radar-map-panel,.auth-panel{padding:24px;border-radius:22px}
+	.hub-panel,.farmer-directory,.compose-panel,.radar-insights,.review-card,.help-panel,.help-sidebar-card{padding:21px;border-radius:20px}
+	.market-search-form,.rescue-tool,.sell-simulator,.farm-conditions,.route-board,.input-shop,.ops-panel,.partner-panel,.cart-list,.radar-analytics{padding:21px;border-radius:20px}
+	.modal{display:block;border-radius:22px}.modal-image{min-height:220px}.modal-content{padding:28px 22px}.modal h2{font-size:32px}
+	.add-modal,.auth-form{padding:28px 22px}
+	.cart-row{align-items:flex-start;flex-direction:column;gap:15px}.cart-item-actions{width:100%;justify-content:space-between}
+	.input-photo{height:170px}
+}
+
+/* Farmer journey: one connected path through the existing tools. */
+.farmer-journey{margin:0 0 34px;padding:30px;background:linear-gradient(135deg,var(--deep),var(--forest));border:1px solid #23865380;border-radius:26px;color:var(--white);box-shadow:0 20px 50px #103C2B24}
+.farmer-journey-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}
+.farmer-journey-heading .panel-kicker{color:var(--gold)}
+.farmer-journey-heading h2{margin:8px 0 6px;color:var(--white);font:600 30px 'Fraunces',serif;letter-spacing:-.03em}
+.farmer-journey-heading p{margin:0;color:#CDE0D0;font-size:12px;line-height:1.55}
+.journey-note{padding:8px 11px;border:1px solid #DCE8D344;border-radius:999px;color:#DCE8D3;font:700 9px 'DM Mono',monospace;white-space:nowrap}
+.journey-steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.journey-step{position:relative;display:flex;min-width:0;min-height:190px;flex-direction:column;align-items:flex-start;padding:15px 13px;text-align:left;border:1px solid #DCE8D32E;border-radius:16px;background:#FFFFFF0D;color:var(--white);transition:background .2s,transform .2s,border-color .2s}
+.journey-step:hover{transform:translateY(-4px);background:#FFFFFF18;border-color:#F4B94299}
+.journey-step>svg{position:absolute;right:12px;bottom:13px;color:var(--gold)}
+.journey-step-number{color:#B8D8BB;font:700 9px 'DM Mono',monospace}
+.journey-step-icon{display:grid;place-items:center;width:34px;height:34px;margin:17px 0 15px;border-radius:11px;background:var(--gold);color:var(--deep)}
+.journey-step-copy{display:flex;min-width:0;flex-direction:column;gap:5px;padding-right:7px}
+.journey-step-copy b{color:var(--gold);font:700 9px 'DM Mono',monospace;letter-spacing:.8px}
+.journey-step-copy strong{font-size:12px;line-height:1.25}
+.journey-step-copy small{color:#CDE0D0;font-size:10px;line-height:1.45}
+.journey-support-link{display:flex;align-items:center;gap:7px;margin-top:18px;padding:0;background:transparent;color:#E7F0E5;font-size:11px;font-weight:700;text-align:left}
+.journey-support-link svg:first-child{color:var(--gold)}
+.journey-support-link svg:last-child{margin-left:2px;color:var(--gold)}
+@media(max-width:1100px){.journey-steps{grid-template-columns:repeat(4,minmax(0,1fr))}.journey-step{min-height:170px}}
+@media(max-width:600px){.farmer-journey{margin-bottom:25px;padding:21px;border-radius:20px}.farmer-journey-heading{display:block}.farmer-journey-heading h2{font-size:27px}.journey-note{display:inline-flex;margin-top:14px}.journey-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.journey-step{min-height:165px;padding:13px 11px}.journey-step-icon{margin:13px 0 12px}.journey-support-link{align-items:flex-start;line-height:1.45}}
